@@ -8,4 +8,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 EXPOSE 80
+COPY . .
 CMD [ "fastapi", "run", "main.py", "--port", "80" ]
