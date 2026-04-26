@@ -37,14 +37,12 @@ jobs:
           tags: user/app:latest
 
   discord:
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Run Discord Webhook
-        uses: Sniddl/discord-commits@v1.8
+        uses: Sniddl/discord-commits@v1.6
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           template: "avatar-with-link"
