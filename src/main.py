@@ -21,10 +21,10 @@ async def status():
 @app.get("/perfil")
 async def perfil():
     return {
-        "nick": "AlexFPS",
+        "nick": "AlexS",
         "plataforma": "Steam",
-        "jogo_favorito": "Counter-Strike 2",
-        "horas_cs": 2850,
+        "jogo": "Counter-Strike 2",
+        "horas_de_jogo": 2850,
         "online": True
     }
 
@@ -46,12 +46,12 @@ async def inventario():
 async def mapa():
     mapas = ["Dust2", "Mirage", "Inferno", "Nuke", "Ancient", "Anubis"]
     return {
-        "mapa_sorteado": random.choice(mapas)
+        "mapa_aleatorio": random.choice(mapas)
     }
 
 @app.get("/rank")
 async def rank():
-    ranks = ["Prata", "AK", "Xerife", "Águia", "Global"]
+    ranks = ["Prata", "AK", "Xerife", "Águia", "Supremo", "Global"]
     return {
         "rank_atual": random.choice(ranks)
     }
