@@ -1,2 +1,4 @@
 fastapi==0.136.0
 uvicorn[standard]
+pytest
+httpx
